@@ -2,11 +2,13 @@
 
 <div class="container-fluid p-3">
     <form method="post">
-        <div class="input-group col-lg-2 col-sm-4 col-6 dates">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Date</span>
+        <div class="d-flex">
+            <div class="input-group-prepend ">
+                <label for="datepicker" class="input-group-text mx-0">Date</label>
             </div>
-            <input class="form-control" type='text' id='datepicker' aria-label="With textarea"></input>
+            <div class="dates">
+                <input class="form-control mx-0" type='text' id='datepicker' aria-label="With textarea" style='border-radius: 0;'></input>
+            </div>
         </div>
 
         <hr class="my-3">

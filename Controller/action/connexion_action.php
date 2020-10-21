@@ -20,6 +20,4 @@ if(isset($_POST['login'])){
     }
 }
 
-
-require '../Controller/action/connexion_action.php';
-is_connected(); 
+is_connected(); ?>
