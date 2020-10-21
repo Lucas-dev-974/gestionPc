@@ -55,10 +55,10 @@ function getAll_pc($pdo){   // Get tout les ordinateur enregistrer
     }
 }
 
-function get_attribution($pdo, $pc_id, $date, $start_houre, $id_pc){   // Get une attribution ou la date = $date, start_houre = $start_houre, id_pc = $id_pc 
+function get_attributionByPc($pdo, $id_pc, $date, $start_houre){   // Get une attribution ou la date = $date, start_houre = $start_houre, id_pc = $id_pc 
     try{
-        $req = $pdo->prepare("SELECT * FROM Attribution WHERE (id_pc = :id_pc, start_houre = :start_houre, date = :date)");
-        $req->execute(array(':id_pc' => $pc_id, ':start_houre' => $start_houre, ':date' => $date));
+        $req = $pdo->prepare("SELECT * FROM Attribution WHERE id_pc = :id_pc AND start_houre = :start_houre AND date = :date");
+        $req->execute(array(':id_pc' => $id_pc, ':start_houre' => $start_houre, ':date' => $date));
         $req_stat = $req->rowCount();
         if($req_stat === 1){
             $data = $req->fetchAll(PDO::FETCH_ASSOC);
