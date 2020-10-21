@@ -1,7 +1,4 @@
-<?php
-require '../Controller/action/connexion_action.php';
-is_connected();  
-?>
+<?php require '../Controller/action/connexion_action.php'; ?>
 
 <div class="container-fluid">
     <hr class="mb-5">
